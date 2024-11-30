@@ -1,0 +1,131 @@
+body {
+    background: linear-gradient(135deg, #d2255e, #d2255e);
+    background-size: 200% 200%;
+    animation: gradientAnimation 8s ease infinite;
+    opacity: 1;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#header {
+    text-align: center;
+    height: 80px;
+    margin-top: -7px;
+    margin-left: -5px;
+    margin-right: -5px;
+    margin-bottom: 5px;
+    border: 3px solid #d2255e;
+    padding-top: 1px;
+    font-family: "Happy Monkey", serif;
+    background: radial-gradient(circle, #ed739b 10%, transparent 11%), 
+                radial-gradient(circle at bottom left, #d2255e 5%, transparent 6%),
+                radial-gradient(circle at bottom right, #d2255e 5%, transparent 6%),
+                radial-gradient(circle at top left, #d2255e 5%, transparent 6%),
+                radial-gradient(circle at top right, #d2255e 5%, transparent 6%);
+    background-size: 1em 1em;
+    background-color: #d2255e;
+    opacity: 1;
+}
+
+.Content {
+    width: 100%;
+    margin: auto;
+    background-color: #f3a9b5;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #b7b7b7;
+    border-width: 2px;
+}
+
+.Dog_Menu {
+    display: flex;
+    padding-bottom: 5px;
+}
+
+#dog_breeds {
+    flex-grow: 3;
+    margin-right: 4px;
+}
+
+#qty {
+    flex-grow: 1;
+}
+
+#fetch_button {
+    flex-grow: 2;
+    margin-left: 4px;
+}
+
+.Dog_Gallery {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+}
+
+.Dog_Gallery_Message {
+    width: 100%;
+    text-align: center;
+    font-size: larger;
+    color: #d2255e;
+    font-weight: bold;
+}
+
+.Image_Container {
+    margin: auto;
+    width: 99%;
+    padding: 2px;
+    height: 300px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(246, 243, 243, 0.1);
+}
+
+@media only screen and (max-width: 500px) {
+    .Dog_Gallery {
+        display: block;
+    }
+    #header {
+        font-size: smaller;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .Dog_Gallery {
+        grid-template-columns: 50% 50%;
+    }
+}
+
+@media only screen and (min-width: 1350px) {
+    .Content {
+        width: 1350px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .Dog_Menu {
+        width: 600px;
+        margin: auto;
+    }
+}
+
+#header_text {
+    color: white;
+    font-family: Arial, sans-serif; /* You can adjust the font as needed */
+    font-size: 2.5rem; /* Adjust the size of the text */
+}
